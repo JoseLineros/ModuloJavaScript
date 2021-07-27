@@ -13,6 +13,8 @@ datos.innerHTML = `El nombre ingresado es: ${string}, la edad es ${number}<br>
 `;
 
 /* Condicionales */
+console.log('Verifica si es mayor de edad');
+console.log(`la edad capturada fue ${number}`);
 if (number >= 18) {
 	console.log('Eres mayor de edad');
 	boolean = true;
