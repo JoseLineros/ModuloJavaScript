@@ -15,10 +15,10 @@
 
 		<link rel="stylesheet" href="public/css/styles.css" />
 
-		<title>Hello, world!</title>
+		<title>JavaScript!</title>
 	</head>
 	<body class="bg-dark">
-		<h1 class="text-success px-5">Hello, world!</h1>
+		<h1 class="text-success px-5">JavaScript!</h1>
 
 		<!-- <div class="form-group">
 			<label for="someText">Texto de usuario</label>
@@ -30,9 +30,9 @@
 		</button>
 
 		<hr /> -->
-		<div class="px-5">
+		<div class="container-fluid px-5">
 			<div class="row">
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6 col-lg-4">
 					<div class="mt-2 px-4 py-3 shadow rounded bg-light altura">
 						<h3 id="nombreUsuario">Funciones</h3>
 						<div class="form-group">
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6 col-lg-4">
 					<div class="mt-2 px-4 py-3 shadow rounded bg-light altura">
 						<h3>Calculadora</h3>
 						<div class="form-group">
@@ -83,23 +83,47 @@
 						</div>
 						<div class="form-group">
 							<button onclick="suma()" class="btn btn-primary">
-								<span class="h4">+</span>
+								<span class="h5">+</span>
 							</button>
 							<button onclick="resta()" class="btn btn-primary">
-								<span class="h4">-</span>
+								<span class="h5">-</span>
 							</button>
 							<button
 								onclick="multiplicacion()"
 								class="btn btn-info"
 							>
-								<span class="h4">*</span>
+								<span class="h5">*</span>
 							</button>
 							<button onclick="division()" class="btn btn-info">
-								<span class="h4">/</span>
+								<span class="h5">/</span>
 							</button>
 						</div>
 
 						<div class="p-1 shadow" id="resultado"></div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="mt-2 px-4 py-3 shadow rounded bg-light altura">
+						<h3>Numero par o impar</h3>
+						<div class="form-group">
+							<label for="numeroParImpar">Numero</label>
+							<input
+								type="number"
+								class="form-control"
+								id="numeroParImpar"
+								placeholder="Ingrese un numero"
+								onkeydown="comprbar()"
+							/>
+
+							<button
+								class="btn btn-info mt-3 w-100"
+								id="btnParImpar"
+							>
+								Verificar
+							</button>
+							<p class="p-3" id="showNumberParImpar"></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -118,5 +142,6 @@
 
 		<script src="public/js/script.js"></script>
 		<script src="public/js/calculadora.js"></script>
+		<script src="public/js/numeroParImpar.js"></script>
 	</body>
 </html>
