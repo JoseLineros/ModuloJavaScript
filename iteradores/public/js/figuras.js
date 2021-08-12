@@ -76,36 +76,35 @@ for (let row2 = 1; row2 <= 8; row2++) {
 console.log(cara2);
 
 /* Ejercicios */
-//* Cuadrado
 let figura1 = '';
-for (let r = 0; r < 8; r++) {
-	for (let s = 0; s < r; s++) {
+for (let i = 0; i < 8; i++) {
+	for (let j = 0; j < i; j++) {
 		figura1 += '*';
 	}
 	figura1 += '\n';
 }
 console.log(figura1);
-console.log('------------------');
+console.log('------');
 
 let figura2 = '';
-for (let r = 0; r < 8; r++) {
-	for (let s = 0; s < 8 - r; s++) {
+for (let i = 0; i < 8; i++) {
+	for (let j = 0; j < 8 - i; j++) {
 		figura2 += '*';
 	}
 	figura2 += '\n';
 }
 console.log(figura2);
-console.log('------------------');
+console.log('------');
 
 let figura3 = '';
 for (let i = 0; i < 8; i++) {
-	for (let k = 8 - i; k > 0; k--) {
+	for (let j = 8 - i; j > 0; j--) {
 		figura3 += ' ';
 	}
-	for (let k = 0; k < i; k++) {
+	for (let j = 0; j < i; j++) {
 		figura3 += '*';
 	}
 	figura3 += '\n';
 }
 console.log(figura3);
-console.log('------------------');
+console.log('------');
