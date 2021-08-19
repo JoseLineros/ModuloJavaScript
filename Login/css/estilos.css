@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.login {
+	margin: 0 auto;
+	height: 80vh;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	items-align: center;
+}
+
+.login .imagen {
+	width: 100px;
+	text-align: center;
+	margin: 50px auto;
+}
+
+#main {
+	min-width: 320px;
+}
+
+.navbar-nav li::after a {
+	background-color: #ffba10;
+	border-color: black;
+	border-style: dotted;
+}
