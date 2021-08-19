@@ -14,7 +14,7 @@
 	items-align: center;
 }
 
-.login .imagen {
+.login.imagen {
 	width: 100px;
 	text-align: center;
 	margin: 50px auto;

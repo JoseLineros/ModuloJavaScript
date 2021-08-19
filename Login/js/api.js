@@ -12,7 +12,7 @@ function cantidadPersonajes() {
 		isNaN(numeroPersonajes)
 	) {
 		errores.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Escriba un numero!</strong>.
+        <strong>Escriba un numero para mostrar cantidad de personajes!</strong>.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`;
 		limpiar();
@@ -96,6 +96,20 @@ function especifico() {
 	let numeroPersonaje = parseInt(
 		document.getElementById('inputCantidad').value
 	);
+
+	if (
+		numeroPersonaje === '' ||
+		numeroPersonaje == 0 ||
+		isNaN(numeroPersonaje)
+	) {
+		errores.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Escriba un numero de personaje para buscar!</strong>.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>`;
+		limpiar();
+		myAlertTop();
+		return;
+	}
 
 	document.getElementById('contenedorPersonajes').innerHTML = '';
 

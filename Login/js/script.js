@@ -14,7 +14,6 @@ function procesarFormulario() {
 
 	if (usuario.trim() === 'jose' && password.trim() === '123123') {
 		console.log('Exito');
-		window.locationf = 'api.html';
 		errores.innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Exito al iniciar sesion!</strong> Espera unos segundos.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -22,7 +21,8 @@ function procesarFormulario() {
             </button>
         </div>`;
 		myAlertTop();
-		window.location.href = 'api.html';
+		// window.open('api.html');
+		window.location = 'api.html';
 	} else {
 		console.log('error');
 		errores.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
