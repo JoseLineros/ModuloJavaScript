@@ -90,6 +90,37 @@ const print = (datos) => {
 	}
 };
 
+function especifico() {
+	console.log('especifico');
+
+	let numeroPersonaje = parseInt(
+		document.getElementById('inputCantidad').value
+	);
+
+	document.getElementById('contenedorPersonajes').innerHTML = '';
+
+	let url = `https://rickandmortyapi.com/api/character/${numeroPersonaje}`;
+	fetch(url)
+		.then((res) => res.json())
+		.then((data) => printEspecifico(data))
+		.catch((error) => console.log(error));
+}
+
+const printEspecifico = (data) => {
+	console.log(data);
+	let card = `<div class="card m-2" style="width: 18rem;">
+	    <img src="${data.image}" class="card-img-top" alt=".">
+	    <div class="card-body">
+	        <small>${data.id}</small>
+	        <h4>${data.name}</h4>
+	        <p><b>Especie : </b>${data.species}</p>
+	        <p><b>Origin : </b>${data.origin.name}</p>
+	    </div>
+	</div>`;
+
+	document.getElementById('contenedorPersonajes').innerHTML += card;
+};
+
 function myAlertTop() {
 	document.getElementById('errores').style.display = 'block';
 	setTimeout(function () {
